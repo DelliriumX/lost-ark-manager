@@ -1,12 +1,12 @@
 const environment = require('dotenv').config()
 const path = require('path')
 const fs = require('fs')
-// const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
+const NodePolyfillPlugin = require('node-polyfill-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
-// const VirtualModulesPlugin = require('webpack-virtual-modules')
-// const { ApplicationManifest } = require("./src/core/core.generator.js");
+const VirtualModulesPlugin = require('webpack-virtual-modules')
+const { ApplicationManifest } = require("./src/core/core.generator.js");
 // const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const DefinePlugin = require('webpack').DefinePlugin
 const Dotenv = require('dotenv-webpack')
@@ -45,9 +45,9 @@ module.exports = env => {
       publicPath: '/',
     },
     plugins: [
-      // new NodePolyfillPlugin({
-      //   excludeAliases: ['console'],
-      // }),
+      new NodePolyfillPlugin({
+        excludeAliases: ['console'],
+      }),
       new Dotenv(),
       new CleanWebpackPlugin({
         cleanStaleWebpackAssets: false,
@@ -62,9 +62,9 @@ module.exports = env => {
       new MiniCssExtractPlugin({
         filename: '[name].alpha.css',
       }),
-      // new VirtualModulesPlugin({
-      //   "src/core/index.js": manifest.coreScript,
-      // }),
+      new VirtualModulesPlugin({
+        "src/core/index.js": manifest.coreScript,
+      }),
       // new ErrorOverlayPlugin(),
       new DefinePlugin({
         VERSION: JSON.stringify(require('./package.json').version),

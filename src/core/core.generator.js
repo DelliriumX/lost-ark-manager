@@ -44,7 +44,7 @@ const generateBundlerScript = (manifest) => {
   const missingDependency = dependencies.find(module => !allModules[module])
   if (missingDependency){
     throw new Error(
-      `\x1b[31mApplication "${manifest.application.toUpperCase()}" cannot be complied, missing module: ${missingDependency} is required.\x1b[0m`
+      `\x1b[31mApplication cannot be complied, missing module: ${missingDependency} is required.\x1b[0m`
     )
   }
 

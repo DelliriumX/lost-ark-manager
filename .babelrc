@@ -1,0 +1,36 @@
+{
+  "assumptions": {
+    "constantSuper": true,
+    "constantReexports": true,
+    "enumerableModuleMeta": true,
+    "ignoreFunctionLength": true,
+    "ignoreToPrimitiveHint": true,
+    "noClassCalls": true,
+    "noDocumentAll": true,
+    "noNewArrows": false,
+    "privateFieldsAsProperties": true,
+    "pureGetters": true,
+    "setClassMethods": false,
+    "setComputedProperties": true,
+    "setPublicClassFields": true,
+    "setSpreadProperties": true
+  },
+  "presets": ["@babel/preset-env", /*"@babel/preset-react"*/],
+  "plugins": [],
+  "env": {
+    "development": {
+      "plugins": [
+        ["@babel/plugin-proposal-class-properties"],
+        // ["@babel/plugin-proposal-object-rest-spread", false],
+        ["@babel/plugin-syntax-dynamic-import"]
+      ]
+    },
+    "production": {
+      "plugins": [
+        ["@babel/plugin-proposal-class-properties"],
+        // ["@babel/plugin-proposal-object-rest-spread", false],
+        ["@babel/plugin-syntax-dynamic-import"]
+      ]
+    }
+  }
+}

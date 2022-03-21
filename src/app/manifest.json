@@ -1,0 +1,7 @@
+{
+  "extend": [],
+  "modules": {
+    "api": {},
+    "system": {}
+  }
+}

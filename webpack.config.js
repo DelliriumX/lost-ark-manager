@@ -55,7 +55,7 @@ module.exports = env => {
       }),
       new HtmlWebpackPlugin({
         title: '',
-        favicon: './favicon.ico',
+        // favicon: './favicon.ico',
         cache: true,
         template: 'index.template.html',
       }),

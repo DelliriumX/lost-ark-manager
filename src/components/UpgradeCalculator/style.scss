@@ -1,0 +1,86 @@
+.UpgradeCalculator-wrapper {
+  width: 500px;
+  min-width: 340px;
+  max-width: 340px;
+  padding-left: 20px;
+  padding-right: 20px;
+  flex-direction: column;
+
+  .UpgradeCalculator-container {
+    position: relative;
+    display: flex;
+    width: 100%;
+    margin-top: 8px;
+    margin-bottom: 8px;
+    align-items: center;
+  }
+
+  .section {
+    padding-bottom: 20px;
+    border-bottom: 1px solid #ccc;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #root {
+    flex-direction: column;
+    margin: auto;
+    width: 300px;
+    padding: 0;
+  }
+
+  h3 {
+    font-size: 1.6em;
+    font-weight: 200;
+    margin-top: 5px;
+    margin-bottom: 5px;
+    font-variant: all-small-caps;
+    min-width: 80px;
+  }
+
+  label {
+    font-variant: all-small-caps;
+    font-size: 1.2em;
+    min-width: 80px;
+  }
+
+  select {
+    font-size: 1.2em;
+    height: 2rem;
+    width: 100%;
+  }
+
+  input {
+    font-size: 1.5em;
+    height: 2.5rem;
+    width: 100%;
+  }
+  input[type='checkbox'] {
+    height: 1.2rem;
+    font-size: 1em;
+  }
+  button {
+    margin-top: 12px;
+    background-color: var(--active-color);
+    color: var(--active-contrast);
+    font-size: 1.5em;
+    width: 100%;
+    padding: 8px;
+    border: solid 1px #ccc;
+    font-variant: all-small-caps;
+    font-weight: 200;
+  }
+
+  #costs-container {
+    margin-top: 20px;
+    border-top: solid 1px #ccc;
+    padding-top: 20px;
+  }
+
+  #costs-container > div {
+    width: 100%;
+    font-size: 1.6em;
+    font-variant: all-small-caps;
+    letter-spacing: 2px;
+  }
+}

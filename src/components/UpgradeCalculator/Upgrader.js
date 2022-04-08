@@ -42,12 +42,11 @@ export class Upgrader {
     const { upgrading } = this.priceMap[this.type]
     const shardCostMultiplier = this.honoingCostResearchFinished ? 0.8 : 1
 
-    let chance = successMap[this.level] + this.increasedChance
+    let chance = successMap[this.level + 1] + this.increasedChance
     if (this.upgradeChanceResearchFinished) {
       chance += 0.2
     }
     chance = this.artisan >= 1 ? 1 : Math.min(1, chance)
-
     if (!this.honed) {
       this.hone()
     }

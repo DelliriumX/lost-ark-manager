@@ -1,10 +1,15 @@
-import "libs/CSSNormalizer.scss";
-import "./style.scss";
+import 'libs/CSSNormalizer.scss'
+import './style.scss'
 
-import React from "react"
-import Router from "router";
+import { useStore } from 'core'
+
+import React from 'react'
+import Router from 'router'
 
 export const App = () => {
+  const store = useStore()
+  
+
   return (
     <>
       <header className="container">
@@ -15,7 +20,7 @@ export const App = () => {
       </main>
       <footer></footer>
     </>
-  );
-};
+  )
+}
 
-export default App;
+export default App

@@ -68,6 +68,7 @@ module.exports = env => {
       // new ErrorOverlayPlugin(),
       new DefinePlugin({
         VERSION: JSON.stringify(require('./package.json').version),
+        APP: JSON.stringify(manifest.application),
       }),
     ],
     devtool: 'inline-source-map',

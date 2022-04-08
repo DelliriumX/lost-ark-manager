@@ -110,11 +110,12 @@ export default createBundle({
   },
   priority: Infinity,
   init: store => {
+    console.log(store)
     if (store.selectIsDebug()) {
       if (IS_BROWSER) {
         // eslint-disable-next-line
         self.store = store
-        console.groupCollapsed(`%cBrainalyzed Core v${VERSION}`, colorBlue)
+        console.groupCollapsed(`%c${APP} Core v${VERSION}`, colorBlue)
         store.logDebugSummary()
         console.groupEnd()
       }

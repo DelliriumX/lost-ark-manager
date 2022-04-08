@@ -1,0 +1,58 @@
+@mixin container {
+  position: relative;
+  display: flex;
+
+  width: 100%;
+  height: 100%;
+
+  flex-grow: 1;
+}
+
+// @mixin vertical {
+//   flex-direction: column;
+//   justify-content: flex-start;
+// }
+
+@mixin focusRipple($radius) {
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 2 * $radius;
+    height: 2 * $radius;
+    top: calc(50% - #{$radius});
+    left: calc(50% - #{$radius});
+    transform: scale(0);
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 100%;
+  }
+  &:focus {
+    outline: none;
+  }
+  &:focus::before {
+    animation: focus-ripple 600ms linear;
+  }
+}
+@keyframes focus-ripple {
+  100% {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+@mixin focusColorFade() {
+  &:focus {
+    outline: none;
+    animation: focus-color-fade 600ms ease-out;
+  }
+}
+
+@keyframes focus-color-fade {
+  0% {
+    color: #3fa9f5;
+  }
+  80% {
+    color: #3fa9f5;
+  }
+}

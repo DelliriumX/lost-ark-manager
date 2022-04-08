@@ -1,6 +1,6 @@
 import React from "react"
 import "./style.scss";
-import { classes } from "../../lib";
+import { classes } from "libs/util";
 
 const classNames = {
   root: "TaskList-wrapper",

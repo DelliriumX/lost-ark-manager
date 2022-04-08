@@ -2,7 +2,7 @@
 /* eslint no-underscore-dangle: 0 */
 import { bindActionCreators, combineReducers, compose, createStore } from 'redux'
 import { resolveSelectors } from 'create-selector'
-import { HAS_WINDOW, HAS_DEBUG_FLAG, IS_PROD } from 'libs/utils'
+import { HAS_WINDOW, HAS_DEBUG_FLAG, IS_PROD } from 'libs/util'
 import invariant from 'tiny-invariant'
 import {BATCH_ACTIONS} from './actiontypes'
 

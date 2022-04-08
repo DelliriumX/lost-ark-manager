@@ -1,7 +1,7 @@
 import React, { useCallback, useEffect, useState } from 'react'
 import './style.scss'
 
-import { classes } from '../../lib'
+import { classes } from 'libs/util'
 
 import PredictionModel from './PredictionModel'
 

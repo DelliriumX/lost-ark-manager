@@ -1,5 +1,5 @@
-import { IS_BROWSER, IS_PROD } from 'libs/utils'
-import { ric } from 'libs/utils/helpers'
+import { IS_BROWSER, IS_PROD } from 'libs/util'
+import { ric } from 'libs/util'
 import { createBundle } from '../bundler'
 import cache from '../cache'
 

@@ -1,4 +1,4 @@
-import { debounce, ric, raf } from 'libs/utils/helpers'
+import { debounce, ric, raf } from 'libs/util'
 import { createBundle } from '../bundler'
 /* eslint no-param-reassign: 0 */
 

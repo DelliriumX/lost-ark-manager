@@ -1,11 +1,11 @@
 import React from 'react'
 import './style.scss'
 
-import UpgradeCalculator from '../../components/UpgradeCalculator'
-import CharacterPanel from '../../components/CharacterPanel'
-import TaskList from '../../components/TaskList'
-import { classes } from '../../lib'
-import AlertManager from '../../components/AlertManager/AlertManager'
+import UpgradeCalculator from 'components/UpgradeCalculator'
+import CharacterPanel from 'components/CharacterPanel'
+import TaskList from 'components/TaskList'
+import { classes } from 'libs/util'
+import AlertManager from 'components/AlertManager/AlertManager'
 
 const classNames = {
   root: 'Dashboard-wrapper',

@@ -1,4 +1,4 @@
-import { HAS_DEBUG_FLAG, IS_BROWSER } from 'libs/utils'
+import { HAS_DEBUG_FLAG, IS_BROWSER } from 'libs/util'
 import { DEBUG_DISABLED, DEBUG_ENABLED } from '../actiontypes'
 import { createBundle } from '../bundler'
 

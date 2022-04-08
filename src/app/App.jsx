@@ -1,8 +1,8 @@
+import "libs/CSSNormalizer.scss";
 import "./style.scss";
 
 import React from "react"
 import Router from "router";
-import {Link} from "react-router-dom"
 
 export const App = () => {
   return (

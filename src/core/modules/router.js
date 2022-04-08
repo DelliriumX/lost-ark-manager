@@ -1,6 +1,6 @@
 import createBrowserHistory from 'history/createBrowserHistory'
 import { createSelector } from 'create-selector'
-import { ric, locationMatch } from 'libs/utils/helpers'
+import { ric, locationMatch } from 'libs/util/helpers'
 import { createBundle } from '../bundler'
 import { ROUTER_URL_UPDATED, ROUTER_URL_REDIRECTED } from '../actiontypes'
 

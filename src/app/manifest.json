@@ -1,4 +1,8 @@
 {
   "extend": [],
-  "modules": {}
+  "modules": {
+    "firebase": {
+      "path": "somepath"
+    }
+  }
 }

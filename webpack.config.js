@@ -22,6 +22,7 @@ module.exports = env => {
 
   // const manifest = { application: 'lostark-manager', path: './src/app' }
   const manifest = ApplicationManifest(env.app)
+  const app_codename = manifest.application.toLowerCase().split(' ').join('-')
 
   function recursiveIssuer(m) {
     if (m.issuer) {
@@ -37,7 +38,7 @@ module.exports = env => {
     mode: 'development',
     stats: 'errors-only',
     entry: {
-      [manifest.application]: path.resolve(__dirname, './src/app/index.js'),
+      [app_codename]: path.resolve(__dirname, './src/app'),
     },
     output: {
       filename: '[name].js',

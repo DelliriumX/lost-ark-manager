@@ -1,5 +1,6 @@
 import React from "react"
-import { Switch, Route } from 'react-router-dom'
+import { Switch, Route, Redirect, useStore } from 'core'
+
 import Dashboard from '../pages/Dashboard'
 
 const Router = () => {

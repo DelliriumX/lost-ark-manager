@@ -2,6 +2,7 @@ const fs = require('fs')
 const glob = require('glob')
 
 const getModuleLocation = (modules, app) => {
+  // WIP: unfinished
   if (modules.length === 1) return modules[0]
   return modules.filter(module => {
     // TODO: implement finding any module anywhere (allModules must find them - for now it doesnt)
@@ -84,6 +85,7 @@ const generateBundlerScript = (manifest) => {
   import React from 'react'
   import { createBundle, composeBundles } from 'core/bundler'
   import { Provider, useStore, Router, Route, Redirect, Switch, Link, useLocation, useHistory, useRouteMatch } from 'core/react-bindings'
+  import cache from 'core/cache'
   import appTime from 'core/modules/app-time'
   import asyncCount from 'core/modules/async-count'
   import debug from 'core/modules/debug'
@@ -110,7 +112,7 @@ const store = composeBundles(
     </Provider>
   )
   export default Core
-  export { useStore, Route, Redirect, Switch, Link, useLocation, useHistory, useRouteMatch }
+  export { cache, useStore, Route, Redirect, Switch, Link, useLocation, useHistory, useRouteMatch }
 ` 
 
   console.log(bundlerScript)

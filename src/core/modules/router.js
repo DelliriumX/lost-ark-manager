@@ -1,4 +1,4 @@
-import createBrowserHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from 'history'
 import { createSelector } from 'create-selector'
 import { ric, locationMatch } from 'libs/util/helpers'
 import { createBundle } from '../bundler'
@@ -49,21 +49,31 @@ export default createBundle({
     }),
   },
   actions: {
-    historyPush: payload => (dispatch, { history }) => {
-      history.push(payload)
-    },
-    historyReplace: payload => (dispatch, { history }) => {
-      history.replace(payload)
-    },
-    historyGo: payload => (dispatch, { history }) => {
-      history.go(payload)
-    },
-    historyBack: () => (dispatch, { history }) => {
-      history.goBack()
-    },
-    historyForward: () => (dispatch, { history }) => {
-      history.goForward()
-    },
+    historyPush:
+      payload =>
+      (dispatch, { history }) => {
+        history.push(payload)
+      },
+    historyReplace:
+      payload =>
+      (dispatch, { history }) => {
+        history.replace(payload)
+      },
+    historyGo:
+      payload =>
+      (dispatch, { history }) => {
+        history.go(payload)
+      },
+    historyBack:
+      () =>
+      (dispatch, { history }) => {
+        history.goBack()
+      },
+    historyForward:
+      () =>
+      (dispatch, { history }) => {
+        history.goForward()
+      },
     historyRedirect: payload => dispatch => {
       dispatch({ type: ROUTER_URL_REDIRECTED, payload })
     },

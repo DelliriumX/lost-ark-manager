@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useState } from 'react'
-import './style.scss'
+import 'UpgradeCalculator.scss'
 
 import { classes } from 'libs/util'
 

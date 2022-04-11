@@ -1,0 +1,56 @@
+@use 'libs/CSSNormalizer.scss';
+@use 'libs/Composite.scss';
+@use '_constants.scss';
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+
+html,
+body {
+  letter-spacing: 2px;
+  background-color: rgb(36, 36, 42);
+  color: #ececec;
+}
+
+#root {
+  margin: auto;
+  max-width: 2560px;
+  width: 100vw;
+  height: 100vh;
+  font-family: 'Roboto', sans-serif;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+}
+
+header,
+footer {
+  display: flex;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+
+main {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  flex-grow: 1;
+  flex-shrink: 1;
+}
+
+.container {
+  position: relative;
+  display: flex;
+  width: 100%;
+  background-color: rgba(100, 100, 150, 0.25);
+  padding: 10px;
+  padding-top: 2rem;
+  margin-top: 5px;
+  > h3 {
+    position: absolute;
+    top: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 10px;
+    line-height: 2rem;
+    left: 0;
+  }
+}

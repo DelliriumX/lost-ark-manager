@@ -110,7 +110,6 @@ export default createBundle({
   },
   priority: Infinity,
   init: store => {
-    console.log(store)
     if (store.selectIsDebug()) {
       if (IS_BROWSER) {
         // eslint-disable-next-line

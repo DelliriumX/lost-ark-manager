@@ -1,14 +1,27 @@
-import React from "react"
+import React from 'react'
 import { Switch, Route, Redirect, useStore } from 'core'
 
-import Dashboard from '../pages/Dashboard'
+import HomePage from '../pages/HomePage'
+import LoginPage from '../pages/LoginPage'
+import MarketPage from '../pages/MarketPage'
 
 const Router = () => {
-  return (
-    <Switch>
-      <Route path="/" component={Dashboard}></Route>
-    </Switch>
-  )
+  const { user } = useStore('selectUser')
+
+  if (!user)
+    return (
+      <Switch>
+        <Route path="/" component={LoginPage}></Route>
+        <Redirect to="/"></Redirect>
+      </Switch>
+    )
+  if (user)
+    return (
+      <Switch>
+        <Route path="/" component={HomePage}></Route>
+        <Redirect to="/"></Redirect>
+      </Switch>
+    )
 }
 
 export default Router

@@ -112,7 +112,7 @@ const store = composeBundles(
     </Provider>
   )
   export default Core
-  export { cache, useStore, Route, Redirect, Switch, Link, useLocation, useHistory, useRouteMatch }
+  export { cache, createBundle, composeBundles, useStore, Route, Redirect, Switch, Link, useLocation, useHistory, useRouteMatch }
 ` 
 
   console.log(bundlerScript)

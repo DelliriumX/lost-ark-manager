@@ -1,5 +1,5 @@
 import React from "react"
-import "./style.scss";
+import "TaskList.scss";
 import { classes } from "libs/util";
 
 const classNames = {

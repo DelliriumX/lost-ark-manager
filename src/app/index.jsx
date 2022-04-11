@@ -1,20 +1,13 @@
-import React from 'react'
 import ReactDOM from 'react-dom'
 import Core, { cache } from 'core'
-import 'libs/CSSNormalizer.scss'
-import 'style.scss'
+import 'App.scss'
 
-// GLOBAL COMPONENT IMPORTS
-
-// ROUTER IMPORTS
 import AppRouter from 'router'
 
 const App = () => {
   return (
     <React.StrictMode>
-      <header className="container">
-        <h3>Lost Ark Manager</h3>
-      </header>
+      <header></header>
       <main>
         <AppRouter></AppRouter>
       </main>
@@ -27,6 +20,9 @@ cache.getAll().then(initialData => {
   if (initialData) {
     // console.log('starting with locally cache data:', initialData)
   }
+  document.body.setAttribute('oncontextmenu', 'return false')
+  document.body.setAttribute('onselectstart', 'return false')
+  document.body.setAttribute('ondragstart', 'return false')
   ReactDOM.render(
     <Core preloadedData={initialData}>
       <App />

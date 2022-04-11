@@ -1,5 +1,4 @@
-import React from 'react'
-import './style.scss'
+import 'Page-Home.scss'
 
 import UpgradeCalculator from 'components/UpgradeCalculator'
 import CharacterPanel from 'components/CharacterPanel'
@@ -8,7 +7,7 @@ import { classes } from 'libs/util'
 import AlertManager from 'components/AlertManager/AlertManager'
 
 const classNames = {
-  root: 'Dashboard-wrapper',
+  root: 'HomePage-wrapper',
 }
 
 const HomePage = () => {

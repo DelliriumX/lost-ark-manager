@@ -1,14 +1,19 @@
 {
   "extend": [],
   "modules": {
-    "firebase": {
-      "apiKey": "AIzaSyAaYA8WGehmDNFJB2-2v9MAeIvt_1kkN_Q",
-      "authDomain": "lost-ark-manager.firebaseapp.com",
-      "projectId": "lost-ark-manager",
-      "storageBucket": "lost-ark-manager.appspot.com",
-      "messagingSenderId": "772687031513",
-      "appId": "1:772687031513:web:7576ea9fa98f23e50062c8",
-      "measurementId": "G-C3FFE65TFW"
-    }
+    "api": {
+      "path": "https://www.base-path-to-your-api.com",
+      "options": {
+        "headers": {
+          "Content-Type": "application/json"
+        }
+      },
+      "authorization": {
+        "type": "Bearer",
+        "source": "store",
+        "selector": "selectToken"
+      }
+    },
+    "auth": {}
   }
 }

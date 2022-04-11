@@ -6,9 +6,10 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 const VirtualModulesPlugin = require('webpack-virtual-modules')
-const { ApplicationManifest } = require("./src/core/core.generator.js");
+const { ApplicationManifest } = require('./src/core/core.generator.js')
 // const ErrorOverlayPlugin = require('error-overlay-webpack-plugin')
 const DefinePlugin = require('webpack').DefinePlugin
+const ProvidePlugin = require('webpack').ProvidePlugin
 const Dotenv = require('dotenv-webpack')
 
 if (environment.error) {
@@ -64,12 +65,15 @@ module.exports = env => {
         filename: '[name].alpha.css',
       }),
       new VirtualModulesPlugin({
-        "src/core/index.js": manifest.coreScript,
+        'src/core/index.js': manifest.coreScript,
       }),
       // new ErrorOverlayPlugin(),
       new DefinePlugin({
         VERSION: JSON.stringify(require('./package.json').version),
         APP: JSON.stringify(manifest.application),
+      }),
+      new ProvidePlugin({
+        React: 'react',
       }),
     ],
     devtool: 'inline-source-map',
@@ -127,6 +131,8 @@ module.exports = env => {
       alias: {
         libs: path.resolve(__dirname, './libs/'),
         root: path.resolve(__dirname, './src/'),
+        pages: path.resolve(__dirname, './src/pages/'),
+        style: path.resolve(__dirname, './src/style/'),
         // 'popper.js': path.resolve(
         //   __dirname,
         //   './node_modules/popper.js/dist/esm/popper'
@@ -142,6 +148,9 @@ module.exports = env => {
           use: [
             {
               loader: 'babel-loader',
+            },
+            {
+              loader: path.resolve(__dirname, './style-imports-rewrite-loader.js'),
             },
           ],
         },

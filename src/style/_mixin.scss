@@ -8,11 +8,6 @@
   flex-grow: 1;
 }
 
-// @mixin vertical {
-//   flex-direction: column;
-//   justify-content: flex-start;
-// }
-
 @mixin focusRipple($radius) {
   position: relative;
 

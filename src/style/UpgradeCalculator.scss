@@ -1,3 +1,6 @@
+$active: rgb(26, 38, 116);
+$active-contrast: #ececec;
+
 .UpgradeCalculator-wrapper {
   width: 500px;
   min-width: 340px;
@@ -61,8 +64,8 @@
   }
   button {
     margin-top: 12px;
-    background-color: var(--active-color);
-    color: var(--active-contrast);
+    background-color: $active;
+    color: $active-contrast;
     font-size: 1.5em;
     width: 100%;
     padding: 8px;

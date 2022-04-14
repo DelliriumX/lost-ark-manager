@@ -14,6 +14,10 @@ const initialState = {
   lastError: null,
 }
 
+const { token, user, logout } = useStore('selectToken, selectUser', 'logout')
+
+logout({ user: 'user', pass: 'pass' })
+
 export default config =>
   createBundle({
     name: 'auth',

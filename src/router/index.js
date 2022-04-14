@@ -18,7 +18,7 @@ const Router = () => {
   if (user)
     return (
       <Switch>
-        <Route path="/" component={HomePage}></Route>
+        <Route path="/" component={MarketPage}></Route>
         <Redirect to="/"></Redirect>
       </Switch>
     )

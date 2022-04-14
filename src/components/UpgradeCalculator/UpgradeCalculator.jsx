@@ -19,7 +19,7 @@ const TIER_MAP = {
     802, 820, 840, 860, 880, 900, 920, 990, 960, 980, 1000, 1020, 1040, 1060, 1080,
     1100,
   ],
-  // 3: [ 1302, 1320, 1340, 360, 380, 400, 420, 440, 460, 480, 500, 520, 540, 560, 580, 600 ],
+  // 3: [ 1302, 1305, 1310, 1313, 1326, 1320, 1325, 440, 460, 480, 500, 520, 540, 560, 580, 600 ],
 }
 
 const UpgradeCalculator = () => {
@@ -117,7 +117,7 @@ const UpgradeCalculator = () => {
       chanceUpgradeFinished,
       tier
     )
-    model.simulate(1000, setResults)
+    model.simulate(10000, setResults)
   }
 
   useEffect(() => {
